@@ -11,7 +11,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { IStoreState } from './types/index';
 
 const store = createStore<IStoreState, CommandAction, any, any>(command, {
-    command: 'Example command',
+    command: 'pwd',
     commandComplete: false,
     commandPending: false,
     currentDirectory: '',

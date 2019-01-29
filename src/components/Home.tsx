@@ -15,7 +15,7 @@ function Home({ command, updateCommand }: IProps) {
     return (
         <HomeContainer>
             <Rotate>
-                COMMAND: {command}
+                $ {command}
             </Rotate>
             <div className={"prompt"}>
                 <input type={"text"} onChange={handleChange} value={command} />
