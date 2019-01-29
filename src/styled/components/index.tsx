@@ -1,4 +1,5 @@
 import styled from '../styled-components';
+// import * as animations from '../styled-components';
 
 export const Home = styled.div`
     color: ${props => props.theme.primaryColor};
