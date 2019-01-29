@@ -1,0 +1,5 @@
+export const UPDATE_COMMAND = 'UPDATE_COMMAND';
+export type UPDATE_COMMAND = typeof UPDATE_COMMAND;
+
+export const SUBMIT_COMMAND = 'SUBMIT_COMMAND';
+export type SUBMIT_COMMAND = typeof SUBMIT_COMMAND;
