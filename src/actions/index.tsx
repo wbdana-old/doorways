@@ -1,19 +1,25 @@
 import * as constants from '../constants';
 
-export interface UpdateCommand {
+export interface IUpdateCommand {
     type: constants.UPDATE_COMMAND;
     payload: string;
 }
 
-export interface SubmitCommand {
+export interface ISubmitCommand {
     type: constants.SUBMIT_COMMAND;
 }
 
-export type CommandAction = UpdateCommand | SubmitCommand;
+export type CommandAction = IUpdateCommand | ISubmitCommand;
 
-export function updateCommand(payload: string): UpdateCommand {
+export function updateCommand(payload: string): IUpdateCommand {
     return {
-        type: constants.UPDATE_COMMAND,
         payload,
+        type: constants.UPDATE_COMMAND,
+    }
+}
+
+export function submitCommand(): ISubmitCommand {
+    return {
+        type: constants.SUBMIT_COMMAND,
     }
 }
