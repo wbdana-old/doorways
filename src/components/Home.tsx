@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Rotate } from '../styled/components/animations';
+import { HomeContainer } from '../styled/components/home';
 
 export interface IProps {
     command: string,
@@ -12,14 +13,14 @@ function Home({ command, updateCommand }: IProps) {
     };
 
     return (
-        <div className={"home"}>
+        <HomeContainer>
             <Rotate>
                 COMMAND: {command}
             </Rotate>
             <div className={"prompt"}>
                 <input type={"text"} onChange={handleChange} value={command} />
             </div>
-        </div>
+        </HomeContainer>
     );
 }
 
