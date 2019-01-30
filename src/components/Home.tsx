@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Rotate } from '../styled/components/animations';
-import { HomeContainer } from '../styled/components/home';
+import { HomeContainer, PromptInput } from '../styled/components/home';
 
 export interface IProps {
     command: string,
@@ -17,8 +17,11 @@ function Home({ command, updateCommand }: IProps) {
             <Rotate>
                 $ {command}
             </Rotate>
+            <div>
+                $ {command}
+            </div>
             <div className={"prompt"}>
-                <input type={"text"} onChange={handleChange} value={command} />
+                $ <PromptInput type={"text"} onChange={handleChange} value={command} />
             </div>
         </HomeContainer>
     );
