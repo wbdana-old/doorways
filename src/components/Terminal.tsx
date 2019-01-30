@@ -4,13 +4,36 @@ import { TerminalContainer, PromptInput } from '../styled/components/terminal';
 import HistoryLine from './HistoryLine';
 
 export interface IProps {
-    command: string,
-    history: any,
+    command: string;
+    history: any;
     updateCommand: (payload: string) => void;
     submitCommand: (payload: string) => void;
 }
 
 class Terminal extends React.Component<IProps> {
+    private promptInput: React.RefObject<HTMLInputElement>;
+    constructor(props: IProps) {
+        super(props);
+
+        this.promptInput = React.createRef<HTMLInputElement>();
+    }
+
+    componentDidMount() {
+        this.focus();
+    }
+
+    componentDidUpdate() {
+        this.focus();
+    }
+
+    focus = () => {
+        const input = this.promptInput.current;
+
+        if (input) {
+            input.focus();
+        }
+    };
+
     handleChange = (e: any) => {
         this.props.updateCommand(e.target.value);
     };
@@ -28,19 +51,27 @@ class Terminal extends React.Component<IProps> {
                 <Rotate>
                     $ command_prompt()
                 </Rotate>
-                {history.map((historyItem: { command: string, result: string }, index: number) => (
-                    <HistoryLine
-                        historyItem={historyItem}
-                        key={index}
-                    />
-                ))}
+
+                {
+                    history.map(
+                        (historyItem: { command: string, result: string }, index: number) => (
+                            <HistoryLine
+                                historyItem={historyItem}
+                                key={index}
+                            />
+                        )
+                    )
+                }
+
                 <div className={"prompt"}>
-                    guest@wbdana $ <PromptInput
-                    type={"text"}
-                    value={command}
-                    onChange={this.handleChange}
-                    onKeyDown={this.handleKeyPress}
-                />
+                    guest@wbdana $
+                    <PromptInput
+                        ref={this.promptInput}
+                        type={"text"}
+                        value={command}
+                        onChange={this.handleChange}
+                        onKeyDown={this.handleKeyPress}
+                    />
                 </div>
             </TerminalContainer>
         );
