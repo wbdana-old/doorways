@@ -1,6 +1,7 @@
 import { CommandAction } from '../actions';
 import { SUBMIT_COMMAND, UPDATE_COMMAND } from '../constants';
 import { IStoreState } from '../types';
+// import { getBashResult } from './bashResult';
 
 export function command(state: IStoreState, action: CommandAction): IStoreState {
     switch (action.type) {
@@ -10,7 +11,10 @@ export function command(state: IStoreState, action: CommandAction): IStoreState 
                 command: '',
                 history: [
                     ...state.history,
-                    action.payload,
+                    {
+                        command: action.payload,
+                        result: 'success',
+                    },
                 ]
             };
         case UPDATE_COMMAND:

@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import * as actions from '../actions/';
 import Home from '../components/Home';
-import { IStoreState } from '../types/index';
+import { IStoreState } from '../types';
 
 export function mapStateToProps({ command, history }: IStoreState) {
     return {

@@ -2,13 +2,22 @@ import * as React from 'react';
 import { StyledHistoryLine } from '../styled/components/historyLine';
 
 export interface IProps {
-    command: string;
+    historyItem: {
+        command: string;
+        result: string;
+    };
 }
 
 function HistoryLine(props: IProps) {
+    const { historyItem } = props;
     return (
         <StyledHistoryLine>
-           $ {props.command}
+            <StyledHistoryLine>
+                $ {historyItem.command}
+            </StyledHistoryLine>
+            <StyledHistoryLine>
+                {historyItem.result}
+            </StyledHistoryLine>
         </StyledHistoryLine>
     );
 }

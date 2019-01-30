@@ -5,7 +5,7 @@ import HistoryLine from './HistoryLine';
 
 export interface IProps {
     command: string,
-    history: string[],
+    history: any,
     updateCommand: (payload: string) => void;
     submitCommand: (payload: string) => void;
 }
@@ -28,12 +28,9 @@ class Home extends React.Component<IProps> {
                 <Rotate>
                     $ command_prompt()
                 </Rotate>
-                <div>
-                    $ {command}
-                </div>
-                {history.map((command: string, index: number) => (
+                {history.map((historyItem: { command: string, result: string }, index: number) => (
                     <HistoryLine
-                        command={command}
+                        historyItem={historyItem}
                         key={index}
                     />
                 ))}
