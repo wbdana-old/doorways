@@ -3,10 +3,7 @@ import styled from '../styled-components';
 export const TerminalContainer = styled.div`
     background-color: ${props => props.theme.primaryColor}
     color: ${props => props.theme.secondaryColor};
-    flex: 1;
     font-family: Hack, monospace;
-    height: 100%;
-    min-height: 100%;
     
     * {
         font-family: Hack, monospace;

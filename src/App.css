@@ -1,9 +1,10 @@
-.App {
+#root, .App {
+  background-color: black;
   display: flex;
+  flex: 1;
   flex-direction: column;
-  align-items: stretch;
   height: 100%;
-  background-color: grey;
+  min-height: 100%;
 }
 
 .App-logo {
