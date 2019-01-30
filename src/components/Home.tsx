@@ -35,7 +35,7 @@ class Home extends React.Component<IProps> {
                     />
                 ))}
                 <div className={"prompt"}>
-                    $ <PromptInput
+                    guest@wbdana $ <PromptInput
                     type={"text"}
                     value={command}
                     onChange={this.handleChange}

@@ -13,7 +13,7 @@ function HistoryLine(props: IProps) {
     return (
         <StyledHistoryLine>
             <StyledHistoryLine>
-                $ {historyItem.command}
+                guest@wbdana $ {historyItem.command}
             </StyledHistoryLine>
             <StyledHistoryLine>
                 {historyItem.result}
