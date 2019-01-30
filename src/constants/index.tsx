@@ -11,3 +11,6 @@ export type LS = typeof LS;
 
 export const PWD = 'pwd';
 export type PWD = typeof PWD;
+
+export const HELP = 'help';
+export type HELP = typeof HELP;
