@@ -49,7 +49,7 @@ class Terminal extends React.Component<IProps> {
         return (
             <TerminalContainer>
                 <Rotate>
-                    $ command_prompt()
+                    $ wbdana
                 </Rotate>
 
                 {
