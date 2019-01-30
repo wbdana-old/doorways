@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Rotate } from '../styled/components/animations';
-import { HomeContainer, PromptInput } from '../styled/components/home';
+import { TerminalContainer, PromptInput } from '../styled/components/terminal';
 import HistoryLine from './HistoryLine';
 
 export interface IProps {
@@ -10,7 +10,7 @@ export interface IProps {
     submitCommand: (payload: string) => void;
 }
 
-class Home extends React.Component<IProps> {
+class Terminal extends React.Component<IProps> {
     handleChange = (e: any) => {
         this.props.updateCommand(e.target.value);
     };
@@ -24,7 +24,7 @@ class Home extends React.Component<IProps> {
     render() {
         const { command, history } = this.props;
         return (
-            <HomeContainer>
+            <TerminalContainer>
                 <Rotate>
                     $ command_prompt()
                 </Rotate>
@@ -42,9 +42,9 @@ class Home extends React.Component<IProps> {
                     onKeyDown={this.handleKeyPress}
                 />
                 </div>
-            </HomeContainer>
+            </TerminalContainer>
         );
     }
 }
 
-export default Home;
+export default Terminal;

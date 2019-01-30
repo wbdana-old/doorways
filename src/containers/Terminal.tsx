@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import * as actions from '../actions/';
-import Home from '../components/Home';
+import Terminal from '../components/Terminal';
 import { IStoreState } from '../types';
 
 export function mapStateToProps({ command, history }: IStoreState) {
@@ -18,4 +18,4 @@ export function mapDispatchToProps(dispatch: Dispatch<actions.CommandAction>) {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Terminal);
