@@ -2,7 +2,6 @@
 
 export interface IStoreState {
     command: string;
-    commandPending: boolean;
-    commandComplete: boolean;
     currentDirectory: string;
+    history: string[];
 }

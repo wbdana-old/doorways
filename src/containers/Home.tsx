@@ -4,15 +4,16 @@ import * as actions from '../actions/';
 import Home from '../components/Home';
 import { IStoreState } from '../types/index';
 
-export function mapStateToProps({ command }: IStoreState) {
+export function mapStateToProps({ command, history }: IStoreState) {
     return {
         command,
+        history,
     }
 }
 
 export function mapDispatchToProps(dispatch: Dispatch<actions.CommandAction>) {
     return {
-        submitCommand: () => dispatch(actions.submitCommand()),
+        submitCommand: (payload: string) => dispatch(actions.submitCommand(payload)),
         updateCommand: (payload: string) => dispatch(actions.updateCommand(payload)),
     }
 }

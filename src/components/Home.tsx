@@ -4,8 +4,9 @@ import { HomeContainer, PromptInput } from '../styled/components/home';
 
 export interface IProps {
     command: string,
+    history: string[],
     updateCommand: (payload: string) => void;
-    submitCommand: () => void;
+    submitCommand: (payload: string) => void;
 }
 
 class Home extends React.Component<IProps> {
@@ -16,18 +17,22 @@ class Home extends React.Component<IProps> {
     handleKeyPress = (e: any) => {
         if (e.keyCode === 13) {
             console.log('hit enter');
+            this.props.submitCommand(e.target.value);
         }
     };
 
     render() {
-        const { command } = this.props;
+        const { command, history } = this.props;
         return (
             <HomeContainer>
                 <Rotate>
-                    $ {command}
+                    $ command_prompt()
                 </Rotate>
                 <div>
                     $ {command}
+                </div>
+                <div>
+                    {history.join(',\n ')}
                 </div>
                 <div className={"prompt"}>
                     $ <PromptInput
