@@ -12,12 +12,12 @@ function HistoryLine(props: IProps) {
     const { historyItem } = props;
     return (
         <StyledHistoryLine>
-            <StyledHistoryLine>
+            <div>
                 guest@wbdana $ {historyItem.command}
-            </StyledHistoryLine>
-            <StyledHistoryLine>
+            </div>
+            <div>
                 {historyItem.result}
-            </StyledHistoryLine>
+            </div>
         </StyledHistoryLine>
     );
 }
