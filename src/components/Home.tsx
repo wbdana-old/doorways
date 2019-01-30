@@ -16,7 +16,6 @@ class Home extends React.Component<IProps> {
 
     handleKeyPress = (e: any) => {
         if (e.keyCode === 13) {
-            console.log('hit enter');
             this.props.submitCommand(e.target.value);
         }
     };

@@ -7,6 +7,7 @@ export function command(state: IStoreState, action: CommandAction): IStoreState 
         case SUBMIT_COMMAND:
             return {
                 ...state,
+                command: '',
                 history: [
                     ...state.history,
                     action.payload,

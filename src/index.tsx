@@ -13,7 +13,7 @@ import { theme } from './styled/theme';
 import { IStoreState } from './types/index';
 
 const store = createStore<IStoreState, CommandAction, any, any>(command, {
-    command: 'pwd',
+    command: '',
     currentDirectory: '',
     history: [],
 });
