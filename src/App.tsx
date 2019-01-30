@@ -1,10 +1,10 @@
 import * as React from 'react';
-import Home from './containers/Terminal';
+import Terminal from './containers/Terminal';
 
 class App extends React.Component {
   public render() {
     return (
-        <Home />
+        <Terminal />
     );
   }
 }
