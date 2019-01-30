@@ -16,6 +16,7 @@ export const PromptInput = styled.input`
     caret-color: ${props => props.theme.grey}
     color: ${props => props.theme.secondaryColor};
     font-family: Hack, monospace;
+    font-size: inherit;
     
     &:focus {
         outline: none;

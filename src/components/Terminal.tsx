@@ -64,8 +64,7 @@ class Terminal extends React.Component<IProps> {
                 }
 
                 <div className={"prompt"}>
-                    guest@wbdana $
-                    <PromptInput
+                    guest@wbdana $ <PromptInput
                         ref={this.promptInput}
                         type={"text"}
                         value={command}
