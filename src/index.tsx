@@ -19,11 +19,11 @@ const store = createStore<IStoreState, CommandAction, any, any>(command, {
 });
 
 ReactDOM.render(
-    <Provider store={store}>
-        <ThemeProvider theme={theme}>
-            <App />
-        </ThemeProvider>
-  </Provider>,
+<ThemeProvider theme={theme}>
+            <Provider store={store}>
+                <App />
+            </Provider>
+        </ThemeProvider>,
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();

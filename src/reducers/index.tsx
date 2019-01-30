@@ -1,7 +1,7 @@
 import { CommandAction } from '../actions';
 import { SUBMIT_COMMAND, UPDATE_COMMAND } from '../constants';
 import { IStoreState } from '../types';
-import { getBashResult } from '../util/bashResult';
+import { getBashResult } from '../services/bashResult';
 
 export function command(state: IStoreState, action: CommandAction): IStoreState {
     switch (action.type) {
