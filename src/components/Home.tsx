@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Rotate } from '../styled/components/animations';
 import { HomeContainer, PromptInput } from '../styled/components/home';
+import HistoryLine from './HistoryLine';
 
 export interface IProps {
     command: string,
@@ -30,9 +31,12 @@ class Home extends React.Component<IProps> {
                 <div>
                     $ {command}
                 </div>
-                <div>
-                    {history.join(',\n ')}
-                </div>
+                {history.map((command: string, index: number) => (
+                    <HistoryLine
+                        command={command}
+                        key={index}
+                    />
+                ))}
                 <div className={"prompt"}>
                     $ <PromptInput
                     type={"text"}
