@@ -11,7 +11,7 @@ export interface IProps {
 }
 
 class Terminal extends React.Component<IProps> {
-    private promptInput: React.RefObject<HTMLInputElement>;
+    private readonly promptInput: React.RefObject<HTMLInputElement>;
     constructor(props: IProps) {
         super(props);
 
