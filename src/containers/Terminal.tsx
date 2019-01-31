@@ -4,9 +4,10 @@ import * as actions from '../actions/';
 import Terminal from '../components/Terminal';
 import { IStoreState } from '../types';
 
-export function mapStateToProps({ command, history }: IStoreState) {
+export function mapStateToProps({ command, currentDirectory, history }: IStoreState["terminal"]) {
     return {
         command,
+        currentDirectory,
         history,
     }
 }

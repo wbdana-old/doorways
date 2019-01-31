@@ -13,6 +13,7 @@ export interface ISubmitCommand {
 export type CommandAction = IUpdateCommand | ISubmitCommand;
 
 export function updateCommand(payload: string): IUpdateCommand {
+    console.log(payload);
     return {
         payload,
         type: constants.UPDATE_COMMAND,

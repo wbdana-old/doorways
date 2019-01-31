@@ -8,17 +8,26 @@ export function command(state: IStoreState, action: CommandAction): IStoreState 
         case SUBMIT_COMMAND:
             return {
                 ...state,
-                command: '',
-                history: [
-                    ...state.history,
-                    {
-                        command: action.payload,
-                        result: getBashResult(state.command),
-                    },
-                ]
+                terminal: {
+                    ...state.terminal,
+                    command: '',
+                    history: [
+                        ...state.terminal.history,
+                        {
+                            command: action.payload,
+                            result: getBashResult(state.terminal.command),
+                        },
+                    ]
+                }
             };
         case UPDATE_COMMAND:
-            return { ...state, command: action.payload };
+            return {
+                ...state,
+                terminal: {
+                    ...state.terminal,
+                    command: action.payload
+                }
+            };
         default:
             return state;
     }
