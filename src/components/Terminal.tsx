@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Rotate } from '../styled/components/animations';
 import { TerminalContainer, PromptInput } from '../styled/components/terminal';
+import { GuiTab } from '../styled/components/guiTab';
 import HistoryLine from './HistoryLine';
 
 export interface IProps {
@@ -49,6 +50,8 @@ class Terminal extends React.Component<IProps> {
         const { command, history } = this.props;
         return (
             <TerminalContainer>
+                <GuiTab />
+
                 <Rotate>
                     $ wbdana
                 </Rotate>
