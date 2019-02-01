@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Rotate } from '../styled/components/animations';
 import { TerminalContainer, PromptInput } from '../styled/components/terminal';
-import { GuiTab } from '../styled/components/guiTab';
+// import { GuiTab } from '../styled/components/guiTab';
 import HistoryLine from './HistoryLine';
 
 export interface IProps {
@@ -9,7 +9,6 @@ export interface IProps {
     currentDirectory: string;
     history: [];
     updateCommand: (payload: string) => void;
-    showGui: () => void;
     submitCommand: (payload: string) => void;
 }
 
@@ -47,17 +46,17 @@ class Terminal extends React.Component<IProps> {
         }
     };
 
-    showGui = () => {
-        this.props.showGui();
-    };
+    // showGui = () => {
+    //     this.props.showGui();
+    // };
 
     render() {
         const { command, history } = this.props;
         return (
             <TerminalContainer>
-                <GuiTab
-                    onClick={this.showGui}
-                />
+                {/*<GuiTab*/}
+                    {/*onClick={this.showGui}*/}
+                {/*/>*/}
 
                 <Rotate>
                     $ wbdana

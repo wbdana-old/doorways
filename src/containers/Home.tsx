@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import * as homeActions from '../store/home/actions';
-// import Home from '../components/Home';
+import Home from '../components/Home';
 import {
     HomeActionTypes,
 } from '../store/home';
@@ -13,7 +13,7 @@ const mapStateToProps = ({ home }: ApplicationState) => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<HomeActionTypes>) => ({
-    showGui: () => dispatch(homeActions.showGui()),
+    toggleGui: () => dispatch(homeActions.toggleGui()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

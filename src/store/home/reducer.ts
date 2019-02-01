@@ -1,5 +1,5 @@
 import { Reducer } from 'redux';
-import { SHOW_GUI } from '../../constants';
+import { TOGGLE_GUI } from '../../constants';
 import {
     IHomeState,
 } from './types';
@@ -10,10 +10,10 @@ const initialState: IHomeState = {
 
 const reducer: Reducer<IHomeState> = (state = initialState, action) => {
     switch (action.type) {
-        case SHOW_GUI:
+        case TOGGLE_GUI:
             return {
                 ...state,
-                showGui: true,
+                showGui: !state.showGui,
             };
         default:
             return state;

@@ -4,8 +4,8 @@ export type UPDATE_COMMAND = typeof UPDATE_COMMAND;
 export const SUBMIT_COMMAND = 'SUBMIT_COMMAND';
 export type SUBMIT_COMMAND = typeof SUBMIT_COMMAND;
 
-export const SHOW_GUI = 'SHOW_GUI';
-export type SHOW_GUI = typeof SHOW_GUI;
+export const TOGGLE_GUI = 'TOGGLE_GUI';
+export type TOGGLE_GUI = typeof TOGGLE_GUI;
 
 
 // Bash commands

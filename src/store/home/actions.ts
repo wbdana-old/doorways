@@ -1,11 +1,11 @@
 import * as constants from '../../constants';
 import {
-    IShowGui,
+    IToggleGui,
 } from './types';
 
-export function showGui(): IShowGui {
+export function toggleGui(): IToggleGui {
     return {
-        type: constants.SHOW_GUI,
+        type: constants.TOGGLE_GUI,
     };
 }
 
