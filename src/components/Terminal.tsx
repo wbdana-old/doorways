@@ -5,7 +5,8 @@ import HistoryLine from './HistoryLine';
 
 export interface IProps {
     command: string;
-    history: any;
+    currentDirectory: string;
+    history: [];
     updateCommand: (payload: string) => void;
     submitCommand: (payload: string) => void;
 }
