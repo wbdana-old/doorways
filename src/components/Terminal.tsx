@@ -9,6 +9,7 @@ export interface IProps {
     currentDirectory: string;
     history: [];
     updateCommand: (payload: string) => void;
+    showGui: () => void;
     submitCommand: (payload: string) => void;
 }
 
@@ -46,11 +47,17 @@ class Terminal extends React.Component<IProps> {
         }
     };
 
+    showGui = () => {
+        this.props.showGui();
+    };
+
     render() {
         const { command, history } = this.props;
         return (
             <TerminalContainer>
-                <GuiTab />
+                <GuiTab
+                    onClick={this.showGui}
+                />
 
                 <Rotate>
                     $ wbdana
