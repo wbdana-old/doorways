@@ -1,9 +1,19 @@
-import { CommandAction } from './actions';
+import { Reducer } from 'redux';
 import { SUBMIT_COMMAND, UPDATE_COMMAND } from '../../constants';
-import { ITerminalState } from '../../types';
+import {
+    ITerminalState,
+    // TerminalActionTypes,
+    // IHistoryItem,
+} from './types';
 import { getBashResult } from '../../services/bashResult';
 
-function terminalReducer(state: ITerminalState, action: CommandAction): ITerminalState {
+const initialState: ITerminalState = {
+    command: '',
+    currentDirectory: '/home/guest',
+    history: [],
+};
+
+const reducer: Reducer<ITerminalState> = (state = initialState, action) => {
     switch (action.type) {
         case SUBMIT_COMMAND:
             return {
@@ -14,34 +24,18 @@ function terminalReducer(state: ITerminalState, action: CommandAction): ITermina
                     {
                         command: action.payload,
                         result: getBashResult(state.command),
-                    }
+                    },
                 ],
-                // ...state,
-                // terminal: {
-                //     ...state.terminal,
-                //     command: '',
-                //     history: [
-                //         ...state.terminal.history,
-                //         {
-                //             command: action.payload,
-                //             result: getBashResult(state.terminal.command),
-                //         },
-                //     ]
-                // }
             };
         case UPDATE_COMMAND:
             return {
                 ...state,
                 command: action.payload,
-                // ...state,
-                // terminal: {
-                //     ...state.terminal,
-                //     command: action.payload
-                // }
             };
         default:
             return state;
     }
-}
+};
 
-export default terminalReducer;
+// Instead of using default export, we use named exports, so we can group them in `./index.ts`
+export { reducer as terminalReducer};

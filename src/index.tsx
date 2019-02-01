@@ -11,29 +11,30 @@ import './index.css';
 import { rootReducer } from './store';
 import registerServiceWorker from './registerServiceWorker';
 import { theme } from './styled/theme';
-import { IStoreState } from './types';
+// import { IStoreState } from './types';
+import { ApplicationState } from './store';
 
-const store = createStore<IStoreState, AnyAction, any, any>(rootReducer, {
-    app: {
-        showGui: false,
-    },
+const store = createStore<ApplicationState, AnyAction, any, any>(rootReducer, {
+    // app: {
+    //     showGui: false,
+    // },
     terminal: {
         command: '',
         currentDirectory: '',
         history: [],
     },
-    gui: {
-        menuOpen: false,
-    },
-    structure: {
-        root: {
-            home: {
-                guest: {
-
-                }
-            }
-        }
-    },
+    // gui: {
+    //     menuOpen: false,
+    // },
+    // structure: {
+    //     root: {
+    //         home: {
+    //             guest: {
+    //
+    //             }
+    //         }
+    //     }
+    // },
 }, composeWithDevTools());
 
 ReactDOM.render(

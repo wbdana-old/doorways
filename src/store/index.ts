@@ -1,16 +1,19 @@
 import {
     combineReducers,
-    Dispatch,
-    Reducer,
-    Action,
-    AnyAction,
+    // Dispatch,
+    // Reducer,
+    // Action,
+    // AnyAction,
 } from 'redux';
-import terminalReducer from './terminal/reducer';
+import {
+    ITerminalState,
+    terminalReducer,
+} from './terminal';
 
-const rootReducer = combineReducers({
+export interface ApplicationState {
+    terminal: ITerminalState,
+}
+
+export const rootReducer = combineReducers<ApplicationState>({
     terminal: terminalReducer,
 });
-
-export default rootReducer;
-
-// export { default as rootReducer } from './root';

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Rotate } from '../styled/components/animations';
 import { TerminalContainer, PromptInput } from '../styled/components/terminal';
-// import HistoryLine from './HistoryLine';
+import HistoryLine from './HistoryLine';
 
 export interface IProps {
     command: string;
@@ -20,12 +20,10 @@ class Terminal extends React.Component<IProps> {
     }
 
     componentDidMount() {
-        console.log(this.props);
         this.focus();
     }
 
     componentDidUpdate() {
-        console.log(this.props);
         this.focus();
     }
 
@@ -43,29 +41,28 @@ class Terminal extends React.Component<IProps> {
 
     handleKeyPress = (e: any) => {
         if (e.keyCode === 13) {
-            console.log('hit');
             this.props.submitCommand(e.target.value);
         }
     };
 
     render() {
-        const { command } = this.props;
+        const { command, history } = this.props;
         return (
             <TerminalContainer>
                 <Rotate>
                     $ wbdana
                 </Rotate>
 
-                {/*{*/}
-                    {/*history.map(*/}
-                        {/*(historyItem: { command: string, result: string }, index: number) => (*/}
-                            {/*<HistoryLine*/}
-                                {/*historyItem={historyItem}*/}
-                                {/*key={index}*/}
-                            {/*/>*/}
-                        {/*)*/}
-                    {/*)*/}
-                {/*}*/}
+                {
+                    history.map(
+                        (historyItem: { command: string, result: string }, index: number) => (
+                            <HistoryLine
+                                historyItem={historyItem}
+                                key={index}
+                            />
+                        )
+                    )
+                }
 
                 <div className={"prompt"}>
                     guest@wbdana $ <PromptInput
