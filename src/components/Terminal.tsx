@@ -6,7 +6,7 @@ import { TerminalContainer, PromptInput } from '../styled/components/terminal';
 export interface IProps {
     command: string;
     currentDirectory: string;
-    history: any;
+    history: [];
     updateCommand: (payload: string) => void;
     submitCommand: (payload: string) => void;
 }

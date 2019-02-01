@@ -1,19 +1,19 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import {AnyAction, createStore} from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { ThemeProvider } from 'styled-components';
 
-import { CommandAction } from './actions';
+// import { CommandAction } from './actions';
 import App from './App';
 import './index.css';
-import { command } from './reducers/index';
+import { rootReducer } from './store';
 import registerServiceWorker from './registerServiceWorker';
 import { theme } from './styled/theme';
-import { IStoreState } from './types/index';
+import { IStoreState } from './types';
 
-const store = createStore<IStoreState, CommandAction, any, any>(command, {
+const store = createStore<IStoreState, AnyAction, any, any>(rootReducer, {
     app: {
         showGui: false,
     },

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
-import * as actions from '../actions/';
+import * as actions from '../store/terminal/actions';
 import Terminal from '../components/Terminal';
 import { IStoreState } from '../types';
 

@@ -5,7 +5,7 @@ interface IHistoryItem {
     result: string;
 }
 
-interface ITerminalState {
+export interface ITerminalState {
     command: string;
     currentDirectory: string;
     history: IHistoryItem[];
