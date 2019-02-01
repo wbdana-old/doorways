@@ -6,7 +6,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { ThemeProvider } from 'styled-components';
 
 // import { CommandAction } from './actions';
-import App from './App';
+// import App from './App';
+import Home from './containers/Home';
 import './index.css';
 import { rootReducer } from './store';
 import registerServiceWorker from './registerServiceWorker';
@@ -40,7 +41,8 @@ const store = createStore<ApplicationState, AnyAction, any, any>(rootReducer, {
 ReactDOM.render(
 <ThemeProvider theme={theme}>
             <Provider store={store}>
-                <App />
+                {/*<App />*/}
+                <Home />
             </Provider>
         </ThemeProvider>,
   document.getElementById('root') as HTMLElement
