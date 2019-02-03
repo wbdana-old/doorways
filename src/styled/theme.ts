@@ -1,4 +1,5 @@
 export default interface IThemeInterface {
+    gui: boolean;
     primaryColor: string;
     primaryColorInverted: string;
     secondaryColor: string;

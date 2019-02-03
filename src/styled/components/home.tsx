@@ -1,8 +1,7 @@
 import styled from '../styled-components';
 
-export const HomeContainer = styled.div`
-    /* TODO WBD */
-    /* background-color: ${props => props.theme.primaryColor}; */ /* This color should vary based on showGui state */
+export const HomeContainer = styled("div")<{ gui: boolean }>`
+    background-color: ${props => props.gui ? props.theme.grey : props.theme.primaryColor};
     display: flex;
     flex: 1;
     flex-direction: column;

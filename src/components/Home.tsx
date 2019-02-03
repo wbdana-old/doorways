@@ -24,7 +24,9 @@ class Home extends React.Component<IProps> {
 
     render() {
         return (
-            <HomeContainer>
+            <HomeContainer
+                gui={this.props.showGui}
+            >
                 <GuiTab
                     onClick={this.toggleGui}
                 />
