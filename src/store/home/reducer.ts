@@ -5,7 +5,7 @@ import {
 } from './types';
 
 const initialState: IHomeState = {
-    showGui: false,
+    showGui: true,  // TODO WBD set this back to false
 };
 
 const reducer: Reducer<IHomeState> = (state = initialState, action) => {

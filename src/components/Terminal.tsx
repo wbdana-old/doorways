@@ -1,7 +1,5 @@
 import * as React from 'react';
-// import { Rotate } from '../styled/components/animations';
 import { TerminalContainer, PromptInput } from '../styled/components/terminal';
-// import { GuiTab } from '../styled/components/guiTab';
 import HistoryLine from './HistoryLine';
 
 export interface IProps {
@@ -46,18 +44,10 @@ class Terminal extends React.Component<IProps> {
         }
     };
 
-    // showGui = () => {
-    //     this.props.showGui();
-    // };
-
     render() {
         const { command, history } = this.props;
         return (
             <TerminalContainer>
-                {/*<Rotate>*/}
-                    {/*$ wbdana*/}
-                {/*</Rotate>*/}
-
                 {
                     history.map(
                         (historyItem: { command: string, result: string }, index: number) => (
