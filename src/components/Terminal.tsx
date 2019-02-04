@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Rotate } from '../styled/components/animations';
+// import { Rotate } from '../styled/components/animations';
 import { TerminalContainer, PromptInput } from '../styled/components/terminal';
 // import { GuiTab } from '../styled/components/guiTab';
 import HistoryLine from './HistoryLine';
@@ -54,13 +54,9 @@ class Terminal extends React.Component<IProps> {
         const { command, history } = this.props;
         return (
             <TerminalContainer>
-                {/*<GuiTab*/}
-                    {/*onClick={this.showGui}*/}
-                {/*/>*/}
-
-                <Rotate>
-                    $ wbdana
-                </Rotate>
+                {/*<Rotate>*/}
+                    {/*$ wbdana*/}
+                {/*</Rotate>*/}
 
                 {
                     history.map(
