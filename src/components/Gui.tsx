@@ -19,10 +19,10 @@ class Gui extends React.Component<IProps> {
         return (
             <GuiContainer>
                 <DesktopContainer>
-                    Desktop
+                    Desktop Container
                 </DesktopContainer>
                 <TaskbarContainer>
-                    Taskbar
+                    Taskbar Container
                 </TaskbarContainer>
             </GuiContainer>
         );
