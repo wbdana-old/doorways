@@ -8,4 +8,3 @@ export function toggleGui(): IToggleGui {
         type: constants.TOGGLE_GUI,
     };
 }
-
