@@ -5,6 +5,7 @@ export default interface IThemeInterface {
     secondaryColor: string;
     secondaryColorInverted: string;
     grey: string;
+    guiBackgroundColor: string;
 }
 
 export const theme = {
@@ -13,4 +14,5 @@ export const theme = {
     secondaryColor: '#00C405',
     secondaryColorInverted: '#c1060d',
     grey: '#4e4a4d',
+    guiBackgroundColor: '#008080',
 };
