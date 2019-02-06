@@ -4,6 +4,7 @@ import {
     GuiContainer,
     DesktopContainer,
     TaskbarContainer,
+    MenuContainer,
 } from '../styled/components/gui';
 
 
@@ -25,7 +26,13 @@ class Gui extends React.Component<IProps> {
         return (
             <GuiContainer>
                 <DesktopContainer>
+
                     Desktop Container
+
+                    <MenuContainer
+                        menu={this.props.showMenu}
+                    />
+
                 </DesktopContainer>
                 <TaskbarContainer>
                     <StartButton

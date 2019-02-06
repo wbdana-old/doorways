@@ -1,11 +1,15 @@
 export default interface IThemeInterface {
     gui: boolean;
     menu: boolean;
+
     primaryColor: string;
     primaryColorInverted: string;
     secondaryColor: string;
     secondaryColorInverted: string;
+
     grey: string;
+    offWhite: string;
+
     guiBackgroundColor: string;
 }
 
@@ -16,4 +20,5 @@ export const theme = {
     secondaryColorInverted: '#c1060d',
     grey: '#4e4a4d',
     guiBackgroundColor: '#008080',
+    offWhite: '#CDCDCD',
 };
