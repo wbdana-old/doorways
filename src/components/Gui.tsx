@@ -22,6 +22,13 @@ class Gui extends React.Component<IProps> {
         console.log("Gui props:", this.props);
     }
 
+    renderMenu = () => {
+        if (!this.props.showMenu) {
+            return null;
+        }
+        return <MenuContainer />
+    };
+
     render() {
         return (
             <GuiContainer>
@@ -29,9 +36,7 @@ class Gui extends React.Component<IProps> {
 
                     Desktop Container
 
-                    <MenuContainer
-                        menu={this.props.showMenu}
-                    />
+                    {this.renderMenu()}
 
                 </DesktopContainer>
                 <TaskbarContainer>

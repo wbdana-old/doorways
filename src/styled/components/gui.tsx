@@ -25,9 +25,8 @@ export const StartButtonContainer = styled("button")<{ menu: boolean }>`
     
 `;
 
-export const MenuContainer = styled("div")<{ menu: boolean }>`
+export const MenuContainer = styled.div`
     background-color: ${props => props.theme.offWhite};
-    display: ${props => props.menu ? 'relative' : 'none'};
     height: 40%;
     width: 20%;
 `;
