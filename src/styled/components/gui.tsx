@@ -18,22 +18,24 @@ export const TaskbarContainer = styled.div`
     align-self: flex-end;
     background-color: ${props => props.theme.grey};
     flex-shrink: 0;
+    height: 21px;
+    position: relative;
     width: 100%;
 `;
 
 export const StartButtonContainer = styled("button")<{ menu: boolean }>`
-    
+    height: 21px;
 `;
 
 export const MenuContainer = styled.div`
     background-color: ${props => props.theme.offWhite};
     bottom: 21px;
-    float: left;
-    height: 40%;
+    flex-direction: column;
+    overflow: hidden;
     position: absolute;
     width: 20%;
 `;
 
-export const MenuItem = styled.div`
-    
+export const MenuItemContainer = styled.div`
+    flex: 1;
 `;

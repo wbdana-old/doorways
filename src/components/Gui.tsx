@@ -5,6 +5,7 @@ import {
     DesktopContainer,
     TaskbarContainer,
     MenuContainer,
+    MenuItemContainer,
 } from '../styled/components/gui';
 
 
@@ -26,7 +27,19 @@ class Gui extends React.Component<IProps> {
         if (!this.props.showMenu) {
             return null;
         }
-        return <MenuContainer />
+        return (
+            <MenuContainer>
+                <MenuItemContainer>
+                    MenuItemContainer
+                </MenuItemContainer>
+                <MenuItemContainer>
+                    MenuItemContainer 2
+                </MenuItemContainer>
+                <MenuItemContainer>
+                    MenuItemContainer 3
+                </MenuItemContainer>
+            </MenuContainer>
+        );
     };
 
     render() {
@@ -38,9 +51,7 @@ class Gui extends React.Component<IProps> {
 
                 </DesktopContainer>
                 <TaskbarContainer>
-
                     {this.renderMenu()}
-
                     <StartButton
                         showMenu={this.props.showMenu}
                         toggleMenu={this.props.toggleMenu}
