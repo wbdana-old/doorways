@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { HomeContainer } from '../styled/components/home';
 import Terminal from '../containers/Terminal';
-import Gui from '../components/Gui';
+import Gui from '../containers/Gui';
 import { GuiTab } from '../styled/components/guiTab';
 import '../App.css';
 
