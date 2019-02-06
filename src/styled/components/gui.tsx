@@ -20,3 +20,7 @@ export const TaskbarContainer = styled.div`
     flex-shrink: 0;
     width: 100%;
 `;
+
+export const StartButtonContainer = styled("button")<{ menu: boolean }>`
+    
+`;
