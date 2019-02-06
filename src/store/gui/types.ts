@@ -4,8 +4,14 @@ export interface IToggleMenu {
     type: constants.TOGGLE_MENU;
 }
 
-export type GuiActionTypes = IToggleMenu;
+export interface ISelectMenuItem {
+    type: constants.SELECT_MENU_ITEM;
+    payload: number;
+}
+
+export type GuiActionTypes = IToggleMenu | ISelectMenuItem;
 
 export interface IGuiState {
     showMenu: boolean;
+    selectedMenuItem?: number;
 }

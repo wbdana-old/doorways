@@ -13,6 +13,7 @@ const mapStateToProps = ({ gui }: ApplicationState) => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<GuiActionTypes>) => ({
+    selectMenuItem: (payload: number) => dispatch(guiActions.selectMenuItem(payload)),
     toggleMenu: () => dispatch(guiActions.toggleMenu()),
 });
 

@@ -30,7 +30,12 @@ class Gui extends React.Component<IProps> {
         return (
             <MenuContainer>
                 <MenuItemContainer>
-                    MenuItemContainer
+                    MenuItemContainer >
+                    {/*<MenuContainer subMenu={true}>*/}
+                        {/*<MenuItemContainer>*/}
+                            {/*Sub Menu Item 1*/}
+                        {/*</MenuItemContainer>*/}
+                    {/*</MenuContainer>*/}
                 </MenuItemContainer>
                 <MenuItemContainer>
                     MenuItemContainer 2

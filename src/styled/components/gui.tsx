@@ -23,23 +23,29 @@ export const TaskbarContainer = styled.div`
     width: 100%;
 `;
 
-export const StartButtonContainer = styled("button")<{ menu: boolean }>`
+export const StartButtonContainer = styled("button")<{ showMenu: boolean }>`
     height: 21px;
 `;
 
-export const MenuContainer = styled.div`
+export const MenuContainer = styled("div")<{ subMenu?: boolean }>`
     align-items: center;
     background-color: ${props => props.theme.offWhite};
-    bottom: 21px;
+    bottom: ${props => props.subMenu ? '0px': '21px' };
     display: flex;
     flex-direction: column;
     height: 40%;
+    margin-left: ${props => props.subMenu ? '40vh' : '0px'};
     overflow: hidden;
-    position: absolute;
+    position: ${props => props.subMenu ? 'relative' : 'absolute'};
     width: 20%;
 `;
 
-export const MenuItemContainer = styled.div`
+
+// for main menu:
+// bottom: 21px;
+// position: absolute;
+
+export const MenuItemContainer = styled("div")<{ subMenu?: boolean }>`
     align-items: center;
     flex: 1;
     text-align: center;
@@ -50,3 +56,19 @@ export const MenuItemContainer = styled.div`
         color: ${props => props.theme.primaryColorInverted};
     };
 `;
+
+// export const SubMenuContainer = styled("div")<{}>`
+//     align-items: center;
+//     flex: 1;
+//     text-align: center;
+//     width: 100%;
+//
+//     &:hover {
+//         background-color: ${props => props.theme.darkBlue};
+//         color: ${props => props.theme.primaryColorInverted};
+//     };
+// `;
+
+
+// Helpers
+// const getSubMenuHeight = (selected: number) => (selected * 40 + 'px');

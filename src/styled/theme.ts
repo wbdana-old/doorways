@@ -1,6 +1,7 @@
 export default interface IThemeInterface {
     gui: boolean;
-    menu: boolean;
+    showMenu: boolean;
+    subMenu: boolean;
 
     primaryColor: string;
     primaryColorInverted: string;

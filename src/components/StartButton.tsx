@@ -14,7 +14,7 @@ class StartButton extends React.Component<IProps> {
     render() {
         return (
             <StartButtonContainer
-                menu={this.props.showMenu}
+                showMenu={this.props.showMenu}
                 onClick={this.props.toggleMenu}
             >
                 Start
