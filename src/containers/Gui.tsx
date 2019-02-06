@@ -13,7 +13,7 @@ const mapStateToProps = ({ gui }: ApplicationState) => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<GuiActionTypes>) => ({
-    toggleGui: () => dispatch(guiActions.toggleMenu()),
+    toggleMenu: () => dispatch(guiActions.toggleMenu()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Gui);
