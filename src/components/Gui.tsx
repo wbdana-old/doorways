@@ -45,20 +45,20 @@ class Gui extends React.Component<IProps> {
     render() {
         return (
             <GuiContainer>
+                {this.renderMenu()}
                 <DesktopContainer>
 
                     Desktop Container
 
                 </DesktopContainer>
                 <TaskbarContainer>
-                    {this.renderMenu()}
+
                     <StartButton
                         showMenu={this.props.showMenu}
                         toggleMenu={this.props.toggleMenu}
                     >
                         Start
                     </StartButton>
-                    Taskbar Container
                 </TaskbarContainer>
             </GuiContainer>
         );

@@ -28,14 +28,25 @@ export const StartButtonContainer = styled("button")<{ menu: boolean }>`
 `;
 
 export const MenuContainer = styled.div`
+    align-items: center;
     background-color: ${props => props.theme.offWhite};
     bottom: 21px;
+    display: flex;
     flex-direction: column;
+    height: 40%;
     overflow: hidden;
     position: absolute;
     width: 20%;
 `;
 
 export const MenuItemContainer = styled.div`
+    align-items: center;
     flex: 1;
+    text-align: center;
+    width: 100%;
+    
+    &:hover {
+        background-color: ${props => props.theme.darkBlue};
+        color: ${props => props.theme.primaryColorInverted};
+    };
 `;

@@ -6,7 +6,7 @@ import {
 
 const initialState: IGuiState = {
     showMenu: false,
-}
+};
 
 const reducer: Reducer<IGuiState> = (state = initialState, action) => {
     switch (action.type) {

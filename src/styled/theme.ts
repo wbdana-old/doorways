@@ -9,6 +9,7 @@ export default interface IThemeInterface {
 
     grey: string;
     offWhite: string;
+    darkBlue: string;
 
     guiBackgroundColor: string;
 }
@@ -21,4 +22,5 @@ export const theme = {
     grey: '#4e4a4d',
     guiBackgroundColor: '#008080',
     offWhite: '#CDCDCD',
+    darkBlue: '#11006A',
 };
