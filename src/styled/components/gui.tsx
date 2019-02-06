@@ -27,6 +27,13 @@ export const StartButtonContainer = styled("button")<{ menu: boolean }>`
 
 export const MenuContainer = styled.div`
     background-color: ${props => props.theme.offWhite};
+    bottom: 21px;
+    float: left;
     height: 40%;
+    position: absolute;
     width: 20%;
+`;
+
+export const MenuItem = styled.div`
+    
 `;

@@ -36,10 +36,11 @@ class Gui extends React.Component<IProps> {
 
                     Desktop Container
 
-                    {this.renderMenu()}
-
                 </DesktopContainer>
                 <TaskbarContainer>
+
+                    {this.renderMenu()}
+
                     <StartButton
                         showMenu={this.props.showMenu}
                         toggleMenu={this.props.toggleMenu}
