@@ -1,5 +1,5 @@
 import { Reducer } from 'redux';
-import {SELECT_MENU_ITEM, TOGGLE_MENU} from '../../constants';
+import { SELECT_MENU_ITEM, TOGGLE_MENU } from '../../constants';
 import {
     IGuiState,
 } from './types';

@@ -6,21 +6,13 @@ export interface IProps {
     toggleMenu: () => void;
 }
 
-class StartButton extends React.Component<IProps> {
-    componentDidMount(): void {
-        console.log(this.props);
-    }
-
-    render() {
-        return (
-            <StartButtonContainer
-                showMenu={this.props.showMenu}
-                onClick={this.props.toggleMenu}
-            >
-                Start
-            </StartButtonContainer>
-        )
-    }
-}
+const StartButton: React.SFC<IProps> = (props) => (
+    <StartButtonContainer
+        onClick={props.toggleMenu}
+        showMenu={props.showMenu}
+    >
+        Start
+    </StartButtonContainer>
+);
 
 export default StartButton;
