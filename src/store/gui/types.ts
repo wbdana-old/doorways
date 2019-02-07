@@ -13,5 +13,5 @@ export type GuiActionTypes = IToggleMenu | ISelectMenuItem;
 
 export interface IGuiState {
     showMenu: boolean;
-    selectedMenuItem?: number;
+    selectedMenuItem?: number | null;
 }

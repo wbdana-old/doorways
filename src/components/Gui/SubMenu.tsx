@@ -1,6 +1,5 @@
 import * as React from 'react';
 import SubMenuItem from './SubMenuItem';
-// import MenuItem from './MenuItem';
 import {
     SubMenuContainer,
 } from '../../styled/components/gui';
@@ -18,8 +17,7 @@ export interface IOptions {
 const SubMenu = (props: IProps) => {
     const { options, selectedMenuItem } = props;
 
-    // TODO WBD Fix this, should be null by default.
-    if (selectedMenuItem === undefined) {
+    if (selectedMenuItem === null) {
         return null;
     }
 

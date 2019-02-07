@@ -5,7 +5,7 @@ import {
 } from './types';
 
 const initialState: IGuiState = {
-    selectedMenuItem: undefined,
+    selectedMenuItem: null,
     showMenu: false,
 };
 
@@ -17,6 +17,12 @@ const reducer: Reducer<IGuiState> = (state = initialState, action) => {
                 showMenu: !state.showMenu,
             };
         case SELECT_MENU_ITEM:
+            if (state.selectedMenuItem === action.payload) {
+                return {
+                    ...state,
+                    selectedMenuItem: null,
+                };
+            }
             return {
                 ...state,
                 selectedMenuItem: action.payload,

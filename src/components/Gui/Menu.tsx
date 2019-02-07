@@ -8,8 +8,7 @@ import { MENU_OPTIONS } from './MenuOptions';
 
 export interface IProps {
     handleSelectMenuItem: (id: number) => void;
-    // options: IOptions[];
-    selectedMenuItem: any; // TODO WBD Fix this. Should be number | null;
+    selectedMenuItem: number;
 }
 
 const Menu = (props: IProps) => {

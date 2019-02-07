@@ -6,7 +6,6 @@ import {
     DesktopContainer,
     TaskbarContainer,
 } from '../../styled/components/gui';
-import { MENU_OPTIONS } from './MenuOptions';
 
 
 export interface IProps {
@@ -17,14 +16,6 @@ export interface IProps {
 }
 
 class Gui extends React.Component<IProps> {
-    constructor(props: IProps) {
-        super(props);
-    }
-
-    componentDidMount(): void {
-        console.log("Gui props:", this.props);
-        console.log(MENU_OPTIONS);
-    }
 
     handleSelectMenuItem = (id: number) => {
         this.props.selectMenuItem(id);
@@ -48,12 +39,9 @@ class Gui extends React.Component<IProps> {
             <GuiContainer>
                 {this.renderMenu()}
                 <DesktopContainer>
-
                     Desktop Container
-
                 </DesktopContainer>
                 <TaskbarContainer>
-
                     <StartButton
                         showMenu={this.props.showMenu}
                         toggleMenu={this.props.toggleMenu}
