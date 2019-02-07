@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StartButtonContainer } from '../styled/components/gui';
+import { StartButtonContainer } from '../../styled/components/gui';
 
 export interface IProps {
     showMenu: boolean;

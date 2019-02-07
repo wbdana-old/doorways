@@ -1,5 +1,5 @@
 import * as React from 'react';
-import StartButton from './StartButton';
+import StartButton from './Menu/StartButton';
 import {
     GuiContainer,
     DesktopContainer,
@@ -8,7 +8,7 @@ import {
     MenuItemContainer,
     SubMenuContainer,
 } from '../styled/components/gui';
-import { MENU_OPTIONS } from './MenuOptions';
+import { MENU_OPTIONS } from './Menu/MenuOptions';
 
 
 export interface IProps {
@@ -98,9 +98,11 @@ class Gui extends React.Component<IProps> {
         console.log('rendering', MENU_OPTIONS[selectedMenuItem]);
         return (
             <SubMenuContainer>
-                {MENU_OPTIONS[selectedMenuItem].subs.map(sub => {
+                {MENU_OPTIONS[selectedMenuItem].subs.map((sub, index) => {
                     return (
-                        <MenuItemContainer>
+                        <MenuItemContainer
+                            key={index}
+                        >
                             {sub.title}
                         </MenuItemContainer>
                     );

@@ -52,11 +52,12 @@ export const MenuContainer = styled("div")<{ subMenu?: boolean }>`
 //     width: 20%;
 // `;
 
-// for main menu:
+// for main Menu:
 // bottom: 21px;
 // position: absolute;
 
-export const MenuItemContainer = styled("div")<{ subMenu?: boolean }>`
+// export const MenuItemContainer = styled("div")<{ subMenu?: boolean }>`
+export const MenuItemContainer = styled.div`
     align-items: center;
     flex: 1;
     text-align: center;

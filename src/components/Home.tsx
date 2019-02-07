@@ -16,7 +16,7 @@ class Home extends React.Component<IProps> {
         this.props.toggleGui();
     };
 
-    renderTerminal = () => {
+    renderTerminalOrGui = () => {
         if (this.props.showGui) {
             return <Gui />;
         }
@@ -31,7 +31,7 @@ class Home extends React.Component<IProps> {
                 <GuiTab
                     onClick={this.toggleGui}
                 />
-                {this.renderTerminal()}
+                {this.renderTerminalOrGui()}
             </HomeContainer>
         );
     }
