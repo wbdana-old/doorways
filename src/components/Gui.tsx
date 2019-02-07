@@ -51,6 +51,11 @@ class Gui extends React.Component<IProps> {
     //     );
     // };
 
+    selectMenuItem = (index: number) => {
+        console.log(index);
+        this.props.selectMenuItem(index);
+    };
+
     renderMenu = () => {
         // const { selectedMenuItem } = this.props;
         // if (!selectedMenuItem) {
@@ -60,10 +65,16 @@ class Gui extends React.Component<IProps> {
             return null;
         }
         return (
+
+            // TODO Break Menu, MenuItem out into stateless components
+            // so as to avoid binding a function in onClick
             <MenuContainer>
                 {MENU_OPTIONS.map((menuItem, index)=> {
                     return (
-                        <MenuItemContainer key={index}>
+                        <MenuItemContainer
+                            key={index}
+                            onClick={() => this.selectMenuItem(index)}
+                        >
                             {menuItem.option}
                         </MenuItemContainer>
                     );
