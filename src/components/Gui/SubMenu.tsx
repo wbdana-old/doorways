@@ -1,5 +1,5 @@
 import * as React from 'react';
-import SubMenuItem from './SubMenuItem';
+import SubMenuItem from '../../containers/SubMenuItem';
 import {
     SubMenuContainer,
 } from '../../styled/components/gui';
@@ -11,7 +11,7 @@ export interface IProps {
 
 export interface IOptions {
     title: string;
-    subs: any[];
+    subs: any[]; // TODO WBD be more specific
 }
 
 const SubMenu = (props: IProps) => {
@@ -29,6 +29,8 @@ const SubMenu = (props: IProps) => {
                     key={index}
                     title={sub.title}
                     callback={sub.callback}
+                    url={sub.url}
+                    application={sub.application}
                 />
             ))}
         </SubMenuContainer>

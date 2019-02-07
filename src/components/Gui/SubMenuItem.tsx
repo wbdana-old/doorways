@@ -8,14 +8,21 @@ export interface IProps {
     key: number;
     title: string;
     callback: () => void;
+    application: boolean;
+    url: string;
+    toggleGui: () => void;
 }
 
 const SubMenuItem = (props: IProps) => {
-    const { title, callback } = props;
+    const { application, title, toggleGui, url } = props;
 
     const handleSubItemClicked = () => {
-        if (callback) {
-            callback();
+        if (url) {
+            window.open(url, '_blank');
+        }
+        if (application) {
+            console.log(title);
+            toggleGui();
         }
     };
 
