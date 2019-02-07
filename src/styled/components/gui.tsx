@@ -39,24 +39,6 @@ export const MenuContainer = styled("div")<{ subMenu?: boolean }>`
     width: 20%;
 `;
 
-// export const MenuContainer = styled("div")<{ subMenu?: boolean }>`
-//     align-items: center;
-//     background-color: ${props => props.theme.offWhite};
-//     bottom: ${props => props.subMenu ? '0px': '21px' };
-//     display: flex;
-//     flex-direction: column;
-//     height: 40%;
-//     margin-left: ${props => props.subMenu ? '40vh' : '0px'};
-//     overflow: hidden;
-//     position: ${props => props.subMenu ? 'relative' : 'absolute'};
-//     width: 20%;
-// `;
-
-// for main Gui:
-// bottom: 21px;
-// position: absolute;
-
-// export const MenuItemContainer = styled("div")<{ subMenu?: boolean }>`
 export const MenuItemContainer = styled.div`
     align-items: center;
     flex: 1;
@@ -72,6 +54,7 @@ export const MenuItemContainer = styled.div`
 export const SubMenuContainer = styled("div")<{ selected?: boolean, index?: number }>`
     align-items: center;
     background-color: ${props => props.theme.offWhite};
+    display: flex;
     flex: 1;
     flex-direction: column;
     height: 40%;
@@ -79,11 +62,6 @@ export const SubMenuContainer = styled("div")<{ selected?: boolean, index?: numb
     position: fixed;
     text-align: center;
     width: 20%;
-
-    &:hover {
-        background-color: ${props => props.theme.darkBlue};
-        color: ${props => props.theme.primaryColorInverted};
-    };
 `;
 
 
