@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import * as guiActions from '../store/gui/actions';
-import Gui from '../components/Menu/Gui';
+import Gui from '../components/Gui/Gui';
 import {
     GuiActionTypes,
 } from '../store/gui';
