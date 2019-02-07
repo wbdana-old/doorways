@@ -1,10 +1,8 @@
 import * as React from 'react';
 import MenuItem from './MenuItem';
 import {
-    // MenuItemContainer,
     SubMenuContainer,
 } from '../../styled/components/gui';
-// import { IOptions } from './Menu';
 
 export interface IProps {
     options: IOptions[];

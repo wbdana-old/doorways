@@ -38,7 +38,6 @@ class Gui extends React.Component<IProps> {
         return (
             <Menu
                 handleSelectMenuItem={this.handleSelectMenuItem}
-                // options={MENU_OPTIONS}
                 selectedMenuItem={this.props.selectedMenuItem}
             />
         );
