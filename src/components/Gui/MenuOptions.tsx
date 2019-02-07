@@ -42,4 +42,21 @@ export const MENU_OPTIONS = [
             },
         ],
     },
+    {
+        title: 'Profile',
+        subs: [
+            {
+                title: 'GitHub',
+                callback: () => window.open('https://github.com/wbdana/', '_blank', 'noopener noreferrer'),
+            },
+            {
+                title: 'LinkedIn',
+                callback: () => window.open('https://linkedin.com/in/wbdana/', '_blank', 'noopener noreferrer'),
+            },
+            {
+                title: 'Twitter',
+                callback: () => window.open('https://twitter.com/_wbdana', '_blank', 'noopener noreferrer'),
+            },
+        ]
+    }
 ];
