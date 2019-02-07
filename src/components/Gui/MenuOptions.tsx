@@ -22,6 +22,16 @@ export const MENU_OPTIONS = [
                 title: 'OpenGraph.io Ruby Client',
                 url: 'https://rubygems.org/gems/opengraph-io/',
             },
+            {
+                callback: () => window.open('https://qsmart-react.herokuapp.com/', '_blank', 'noopener noreferrer'),
+                title: 'QSmart',
+                url: 'https://qsmart-react.herokuapp.com/',
+            },
+            {
+                callback: () => window.open('https://pixel-playground.herokuapp.com/', '_blank', 'noopener noreferrer'),
+                title: 'Pixel Playground',
+                url: 'https://pixel-playground.herokuapp.com/',
+            },
         ],
     },
     {
