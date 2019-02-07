@@ -9,6 +9,7 @@ import {
 import { ApplicationState } from '../store';
 
 const mapStateToProps = ({ gui }: ApplicationState) => ({
+    selectedMenuItem: gui.selectedMenuItem,
     showMenu: gui.showMenu,
 });
 
