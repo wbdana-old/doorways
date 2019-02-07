@@ -1,5 +1,6 @@
 import * as React from 'react';
-import MenuItem from './MenuItem';
+import SubMenuItem from './SubMenuItem';
+// import MenuItem from './MenuItem';
 import {
     SubMenuContainer,
 } from '../../styled/components/gui';
@@ -25,10 +26,11 @@ const SubMenu = (props: IProps) => {
     return (
         <SubMenuContainer>
             {options[selectedMenuItem].subs.map((sub, index) => (
-                <MenuItem
+                <SubMenuItem
                     id={index}
                     key={index}
                     title={sub.title}
+                    callback={sub.callback}
                 />
             ))}
         </SubMenuContainer>
