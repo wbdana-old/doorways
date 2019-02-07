@@ -51,7 +51,7 @@ export const MenuItemContainer = styled.div`
     };
 `;
 
-export const SubMenuContainer = styled.div`
+export const SubMenuContainer = styled("div")<{ selected?: boolean, index?: number }>`
     align-items: center;
     background-color: ${props => props.theme.offWhite};
     display: flex;
