@@ -70,9 +70,14 @@ export const MenuItemContainer = styled("div")<{ subMenu?: boolean }>`
 
 export const SubMenuContainer = styled("div")<{ selected?: boolean, index?: number }>`
     align-items: center;
+    background-color: ${props => props.theme.offWhite};
     flex: 1;
+    flex-direction: column;
+    height: 40%;
+    left: 20%;
+    position: fixed;
     text-align: center;
-    width: 100%;
+    width: 20%;
 
     &:hover {
         background-color: ${props => props.theme.darkBlue};
