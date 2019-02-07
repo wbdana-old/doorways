@@ -6,7 +6,7 @@ import {
     TaskbarContainer,
     MenuContainer,
     MenuItemContainer,
-    // SubMenuContainer,
+    SubMenuContainer,
 } from '../styled/components/gui';
 import { MENU_OPTIONS } from './MenuOptions';
 
@@ -25,6 +25,7 @@ class Gui extends React.Component<IProps> {
 
     componentDidMount(): void {
         console.log("Gui props:", this.props);
+        console.log(MENU_OPTIONS);
     }
 
     // renderMenu = () => {
@@ -52,7 +53,7 @@ class Gui extends React.Component<IProps> {
     // };
 
     selectMenuItem = (index: number) => {
-        console.log(index);
+        // console.log(index);
         this.props.selectMenuItem(index);
     };
 
@@ -79,27 +80,34 @@ class Gui extends React.Component<IProps> {
                         </MenuItemContainer>
                     );
                 })}
+                {this.renderSubMenu()}
             </MenuContainer>
         )
     };
 
-    // renderSubMenu = () => {
-    //     console.log(this.props);
-    //     if (!this.props.selectedMenuItem) {
-    //         return null;
-    //     }
-    //     // TODO WBD For submenus, iterate over menu options
-    //     // If index === this.props.selectedMenuItem,
-    //     // set display: flex (or whatever) on styled component props
-    //     // else display: none;
-    //
-    //     // TODO WBD Or is a better approach to just render the one subMenu if it's selected? Probably.
-    //     return (
-    //         <SubMenuContainer>
-    //
-    //         </SubMenuContainer>
-    //     )
-    // };
+    renderSubMenu = () => {
+        console.log(this.props);
+        const { selectedMenuItem } = this.props;
+        // if (!selectedMenuItem || selectedMenuItem === 0) {
+        //     return null;
+        // }
+        // TODO WBD This really needs to change. Should be null by default.
+        if (selectedMenuItem === undefined) {
+            return null;
+        }
+        console.log('rendering', MENU_OPTIONS[selectedMenuItem]);
+        return (
+            <SubMenuContainer>
+                {MENU_OPTIONS[selectedMenuItem].subs.map(sub => {
+                    return (
+                        <MenuItemContainer>
+                            {sub.title}
+                        </MenuItemContainer>
+                    );
+                })}
+            </SubMenuContainer>
+        )
+    };
 
     render() {
         return (
