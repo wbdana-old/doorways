@@ -16,7 +16,7 @@ export const MENU_OPTIONS = [
             },
             {
                 title: 'OpenGraph.io Ruby Client',
-                // url: 'https://rubygems.org/gems/opengraph-io/', // WTF?
+                url: 'https://rubygems.org/gems/opengraph-io/',
             },
         ],
     },
