@@ -1,5 +1,5 @@
 import * as React from 'react';
-import StartButton from './Menu/StartButton';
+import StartButton from './StartButton';
 import {
     GuiContainer,
     DesktopContainer,
@@ -7,8 +7,8 @@ import {
     MenuContainer,
     MenuItemContainer,
     SubMenuContainer,
-} from '../styled/components/gui';
-import { MENU_OPTIONS } from './Menu/MenuOptions';
+} from '../../styled/components/gui';
+import { MENU_OPTIONS } from './MenuOptions';
 
 
 export interface IProps {
