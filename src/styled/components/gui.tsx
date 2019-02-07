@@ -63,7 +63,3 @@ export const SubMenuContainer = styled("div")<{ selected?: boolean, index?: numb
     text-align: center;
     width: 20%;
 `;
-
-
-// Helpers
-// const getSubMenuHeight = (selected: number) => (selected * 40 + 'px');
