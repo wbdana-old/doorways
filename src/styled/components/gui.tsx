@@ -36,7 +36,7 @@ export const MenuContainer = styled("div")<{ subMenu?: boolean }>`
     height: 40%;
     overflow: hidden;
     position: absolute;
-    width: 20%;
+    width: 15%;
 `;
 
 export const MenuItemContainer = styled.div`
@@ -51,15 +51,15 @@ export const MenuItemContainer = styled.div`
     };
 `;
 
-export const SubMenuContainer = styled("div")<{ selected?: boolean, index?: number }>`
+export const SubMenuContainer = styled.div`
     align-items: center;
     background-color: ${props => props.theme.offWhite};
     display: flex;
     flex: 1;
     flex-direction: column;
     height: 40%;
-    left: 20%;
+    left: 15%;
     position: fixed;
     text-align: center;
-    width: 20%;
+    width: 15%;
 `;
