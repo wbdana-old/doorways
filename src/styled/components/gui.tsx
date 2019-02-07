@@ -52,7 +52,7 @@ export const MenuContainer = styled("div")<{ subMenu?: boolean }>`
 //     width: 20%;
 // `;
 
-// for main Menu:
+// for main Gui:
 // bottom: 21px;
 // position: absolute;
 

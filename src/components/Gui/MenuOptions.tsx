@@ -1,6 +1,6 @@
 export const MENU_OPTIONS = [
     {
-        option: 'Projects',
+        title: 'Projects',
         subs: [
             {
                 title: 'Asteroids Online',
@@ -21,7 +21,7 @@ export const MENU_OPTIONS = [
         ],
     },
     {
-        option: 'Applications',
+        title: 'Applications',
         subs: [
             {
                 title: 'Terminal',

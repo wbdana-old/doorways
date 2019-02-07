@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import * as terminalActions from '../store/terminal/actions';
-import Terminal from '../components/Terminal';
+import Terminal from '../components/Terminal/Terminal';
 import {
     TerminalActionTypes,
 } from '../store/terminal';

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TerminalContainer, PromptInput } from '../styled/components/terminal';
+import { TerminalContainer, PromptInput } from '../../styled/components/terminal';
 import HistoryLine from './HistoryLine';
 
 export interface IProps {
