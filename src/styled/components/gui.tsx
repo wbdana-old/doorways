@@ -27,20 +27,42 @@ export const StartButtonContainer = styled("button")<{ showMenu: boolean }>`
     height: 21px;
 `;
 
+export const MenuContainerWrapper = styled("div")<{  }>`
+    background-color: ${props => props.theme.darkBlue};
+    bottom: 21px;
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+    position: absolute;
+    width: 20%;
+`;
+
 export const MenuContainer = styled("div")<{ subMenu?: boolean }>`
     align-items: center;
     background-color: ${props => props.theme.offWhite};
-    bottom: 21px;
     display: flex;
+    flex: 1;
     flex-direction: column;
-    height: 40%;
+    height: 100%;
     overflow: hidden;
     position: absolute;
-    width: 15%;
+    width: 100%;
 `;
 
 export const DoorwaysContainer = styled.div`
+    background-color: ${props => props.theme.darkBlue};
+    color: ${props => props.theme.offWhite};
+    position: absolute;
+
+    transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+
+
     
+    * {
+
+    }
 `;
 
 export const MenuItemContainer = styled.div`
