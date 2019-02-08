@@ -39,6 +39,10 @@ export const MenuContainer = styled("div")<{ subMenu?: boolean }>`
     width: 15%;
 `;
 
+export const DoorwaysContainer = styled.div`
+    
+`;
+
 export const MenuItemContainer = styled.div`
     align-items: center;
     flex: 1;
