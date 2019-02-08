@@ -1,6 +1,8 @@
 import * as React from 'react';
 import {
+    DoorwaysContainer,
     MenuContainer,
+    MenuContainerWrapper,
 } from '../../styled/components/gui';
 import MenuItem from './MenuItem';
 import SubMenu from "./SubMenu";
@@ -17,23 +19,28 @@ const Menu = (props: IProps) => {
     };
 
     return (
-        <MenuContainer>
-            {
-                MENU_OPTIONS.map((menuItem, index) => (
-                    <MenuItem
-                        handleSelectMenuItem={handleSelectMenuItem}
-                        id={index}
-                        key={index}
-                        title={menuItem.title}
-                    />
-                ))
-            }
-            
-            <SubMenu
-                options={MENU_OPTIONS}
-                selectedMenuItem={props.selectedMenuItem}
-            />
-        </MenuContainer>
+        <MenuContainerWrapper>
+            <DoorwaysContainer>
+                Doorways 95
+            </DoorwaysContainer>
+            <MenuContainer>
+                {
+                    MENU_OPTIONS.map((menuItem, index) => (
+                        <MenuItem
+                            handleSelectMenuItem={handleSelectMenuItem}
+                            id={index}
+                            key={index}
+                            title={menuItem.title}
+                        />
+                    ))
+                }
+
+                <SubMenu
+                    options={MENU_OPTIONS}
+                    selectedMenuItem={props.selectedMenuItem}
+                />
+            </MenuContainer>
+        </MenuContainerWrapper>
     );
 };
 
