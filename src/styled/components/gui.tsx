@@ -28,47 +28,44 @@ export const StartButtonContainer = styled("button")<{ showMenu: boolean }>`
 `;
 
 export const MenuContainerWrapper = styled("div")<{  }>`
-    background-color: ${props => props.theme.darkBlue};
+    background-color: ${props => props.theme.secondaryColorInverted};
     bottom: 21px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template: 100% / 5% 1fr 1fr;
     height: 40%;
     position: absolute;
     width: 20%;
+    
+    z-index: 10;
 `;
+
+export const DoorwaysContainer = styled.div`
+    background-color: ${props => props.theme.darkBlue};
+    color: ${props => props.theme.offWhite};
+`;
+
+export const DoorwaysTextContainer = styled.h1`
+    background-color: ${props => props.theme.darkBlue};
+    color: ${props => props.theme.offWhite};
+    font-size: 12px;
+    
+    transform: rotate(-90deg);
+    transform-origin: center left;
+`;
+
+
+// -ms-transform: rotate(-90deg);
+// -webkit-transform: rotate(-90deg);
 
 export const MenuContainer = styled("div")<{ subMenu?: boolean }>`
     align-items: center;
     background-color: ${props => props.theme.offWhite};
     display: flex;
-    flex: 1;
     flex-direction: column;
     height: 100%;
     overflow: hidden;
-    position: absolute;
+
     width: 100%;
-`;
-
-export const DoorwaysContainer = styled.div`
-    background-color: ${props => props.theme.darkBlue};
-    bottom: 50%;
-    color: ${props => props.theme.offWhite};
-    height: 21px;
-    left: 0%;
-    position: absolute;
-    width: 100%;
-    
-    z-index: 5;
-
-    transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-
-
-    
-    * {
-
-    }
 `;
 
 export const MenuItemContainer = styled.div`
@@ -87,11 +84,7 @@ export const SubMenuContainer = styled("div")<{ selected?: boolean, index?: numb
     align-items: center;
     background-color: ${props => props.theme.offWhite};
     display: flex;
-    flex: 1;
     flex-direction: column;
-    height: 40%;
-    left: 15%;
-    position: fixed;
+
     text-align: center;
-    width: 15%;
 `;

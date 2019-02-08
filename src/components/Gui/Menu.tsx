@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {
     DoorwaysContainer,
+    DoorwaysTextContainer,
     MenuContainer,
     MenuContainerWrapper,
 } from '../../styled/components/gui';
@@ -21,8 +22,9 @@ const Menu = (props: IProps) => {
     return (
         <MenuContainerWrapper>
             <DoorwaysContainer>
-                Doorways 95
+                <DoorwaysTextContainer>Doorways 95</DoorwaysTextContainer>
             </DoorwaysContainer>
+
             <MenuContainer>
                 {
                     MENU_OPTIONS.map((menuItem, index) => (
@@ -34,12 +36,12 @@ const Menu = (props: IProps) => {
                         />
                     ))
                 }
-
-                <SubMenu
-                    options={MENU_OPTIONS}
-                    selectedMenuItem={props.selectedMenuItem}
-                />
             </MenuContainer>
+
+            <SubMenu
+                options={MENU_OPTIONS}
+                selectedMenuItem={props.selectedMenuItem}
+            />
         </MenuContainerWrapper>
     );
 };
