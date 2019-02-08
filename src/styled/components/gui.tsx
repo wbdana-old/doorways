@@ -51,8 +51,14 @@ export const MenuContainer = styled("div")<{ subMenu?: boolean }>`
 
 export const DoorwaysContainer = styled.div`
     background-color: ${props => props.theme.darkBlue};
+    bottom: 50%;
     color: ${props => props.theme.offWhite};
+    height: 21px;
+    left: 0%;
     position: absolute;
+    width: 100%;
+    
+    z-index: 5;
 
     transform: rotate(270deg);
     -ms-transform: rotate(270deg);
