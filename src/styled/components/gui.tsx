@@ -42,20 +42,37 @@ export const MenuContainerWrapper = styled("div")<{  }>`
 export const DoorwaysContainer = styled.div`
     background-color: ${props => props.theme.darkBlue};
     color: ${props => props.theme.offWhite};
+    display: flex;
+    
+    * {
+
+    }
 `;
 
-export const DoorwaysTextContainer = styled.h1`
-    background-color: ${props => props.theme.darkBlue};
+export const DoorwaysTextContainer = styled.div`
     color: ${props => props.theme.offWhite};
     font-size: 12px;
+    font-weight: 700;
+    flex: 1;
+    
+    position: absolute;
+    bottom: 0%;
+    left: 2%;
     
     transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
     transform-origin: center left;
 `;
 
+// background-color: ${props => props.theme.darkBlue};
+// color: ${props => props.theme.offWhite};
+// font-size: 12px;
+//
+// transform: rotate(-90deg);
+// transform-origin: center left;
 
-// -ms-transform: rotate(-90deg);
-// -webkit-transform: rotate(-90deg);
+
 
 export const MenuContainer = styled("div")<{ subMenu?: boolean }>`
     align-items: center;
