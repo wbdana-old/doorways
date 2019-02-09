@@ -49,14 +49,14 @@ export const DoorwaysContainer = styled.div`
     }
 `;
 
-export const DoorwaysTextContainer = styled.div`
+export const DoorwaysTextContainer = styled("div")<{ num?: boolean }>`
     color: ${props => props.theme.offWhite};
     font-size: 12px;
-    font-weight: 700;
+    font-weight: ${props => props.num ? '100' : '700'};
     flex: 1;
     
     position: absolute;
-    bottom: 0%;
+    bottom: ${props => props.num ? '31%' : '0%'};
     left: 2%;
     
     transform: rotate(-90deg);

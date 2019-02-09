@@ -22,7 +22,12 @@ const Menu = (props: IProps) => {
     return (
         <MenuContainerWrapper>
             <DoorwaysContainer>
-                <DoorwaysTextContainer>Doorways 95</DoorwaysTextContainer>
+                <DoorwaysTextContainer>
+                    Doorways
+                </DoorwaysTextContainer>
+                <DoorwaysTextContainer num={true}>
+                    95
+                </DoorwaysTextContainer>
             </DoorwaysContainer>
 
             <MenuContainer>
