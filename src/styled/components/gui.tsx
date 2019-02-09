@@ -65,15 +65,6 @@ export const DoorwaysTextContainer = styled.div`
     transform-origin: center left;
 `;
 
-// background-color: ${props => props.theme.darkBlue};
-// color: ${props => props.theme.offWhite};
-// font-size: 12px;
-//
-// transform: rotate(-90deg);
-// transform-origin: center left;
-
-
-
 export const MenuContainer = styled("div")<{ subMenu?: boolean }>`
     align-items: center;
     background-color: ${props => props.theme.offWhite};
