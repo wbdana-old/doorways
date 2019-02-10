@@ -27,7 +27,7 @@ export const StartButtonContainer = styled("button")<{ showMenu: boolean }>`
     height: 21px;
 `;
 
-export const MenuContainerWrapper = styled("div")<{  }>`
+export const MenuContainerWrapper = styled("div")<{ subMenu: boolean }>`
     background-color: ${props => props.theme.secondaryColorInverted};
     bottom: 21px;
     display: grid;
@@ -35,8 +35,6 @@ export const MenuContainerWrapper = styled("div")<{  }>`
     height: 40%;
     position: absolute;
     width: 20%;
-    
-    z-index: 10;
 `;
 
 export const DoorwaysContainer = styled.div`

@@ -19,8 +19,12 @@ const Menu = (props: IProps) => {
         props.handleSelectMenuItem(id);
     };
 
+    const renderSubMenu = () => {
+        return props.selectedMenuItem !== null;
+    };
+
     return (
-        <MenuContainerWrapper>
+        <MenuContainerWrapper subMenu={renderSubMenu()}>
             <DoorwaysContainer>
                 <DoorwaysTextContainer>
                     Doorways
